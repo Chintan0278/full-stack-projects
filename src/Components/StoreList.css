@@ -1,0 +1,278 @@
+.store-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+}
+
+.store-image {
+  width: 100%;
+  height: 180px; /* Set a fixed height */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  border-radius: 8px;
+}
+
+.store-info h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.store-info p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.pagination-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.pagination-filter span {
+  cursor: pointer;
+  transition: text-decoration 0.3s ease;
+  color: #333;
+}
+
+.pagination-filter span:hover {
+  text-decoration: underline;
+}
+
+.pagination-filter span.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-now-btn {
+  background-color: #333; /* Dark grey/black background for a sleek professional look */
+  color: white;
+  padding: 6px 18px; /* Smaller padding for a more compact button */
+  border: 2px solid #333; /* Border to add a subtle outline */
+  border-radius: 30px; /* Oval shape (large radius for a smooth curve) */
+  font-size: 14px; /* Smaller font size for compactness */
+  font-weight: 500; /* Medium weight for elegance */
+  text-transform: uppercase; /* Uppercase text for a clean look */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease, color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.shop-now-btn:hover {
+  background-color: #444; /* Slightly lighter grey on hover */
+  color: #fff; /* Ensures text stays visible on hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.shop-now-btn:active {
+  background-color: #333; /* Reset background color on click */
+  box-shadow: none; /* Remove shadow when clicked */
+}
+
+.shop-now-btn:focus {
+  outline: none; /* Clean focus state */
+}
+
+.shop-now-btn.white {
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+}
+
+.shop-now-btn.white:hover {
+  background-color: #f1f1f1; /* Light grey on hover for white variant */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px; /* Adjust width */
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+}
+
+.search-bar {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 30px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-bar:focus,
+.search-bar:active {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.search-wrapper:focus-within {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  color: gray;
+}
+
+/* Heart Icon Style */
+.store-card {
+  position: relative;
+}
+
+.heart-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.heart-icon {
+  width: 24px;
+  height: 24px;
+  color: gray; /* Default color */
+  transition: color 0.3s ease;
+}
+
+.heart-icon.filled {
+  color: red; /* Filled heart color */
+}
+
+.heart-icon-container:hover {
+  transform: scale(1.2);
+}
+
+/* Dropdown Container Fix */
+.sort-dropdown-container {
+  position: relative;
+  z-index: 100; /* Ensure the dropdown stays above the store list */
+}
+
+.sort-dropdown-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.sort-dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sort-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.sort-dropdown-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sort-dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Pagination Container */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Reduced space between pagination numbers */
+  margin-top: 20px;
+  padding: 8px 0;
+}
+
+/* Pagination Button Styles */
+.pagination-controls button {
+  background: none;
+  border: none;
+  padding: 1px 2px; /* Reduced padding for a smaller button */
+  font-size: 14px; /* Smaller font size */
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+}
+
+/* Hover Effect on Button */
+.pagination-controls button:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+/* Active Page Button (with underline) */
+.pagination-controls button.active {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3; /* Underline when active */
+}
+
+/* Disabled State for Non-Clickable Pagination */
+.pagination-controls button:disabled {
+  color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* Ellipsis for "..." if there are too many pages */
+.pagination-controls .ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Smaller font size for ellipsis */
+  color: #333;
+  font-weight: 500;
+}

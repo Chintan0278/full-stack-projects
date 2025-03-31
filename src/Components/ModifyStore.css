@@ -1,0 +1,103 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Specific container for ModifyStore */
+  .modify-store-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .modify-store-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Form group styling */
+  .modify-store-container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .modify-store-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .modify-store-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .modify-store-container input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Submit Button */
+  .modify-store-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modify-store-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Delete Button */
+  .modify-store-container .delete-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .modify-store-container .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .modify-store-container {
+      width: 95%;
+      margin-top: 30px;
+    }
+  
+    .modify-store-container button, .modify-store-container .delete-button {
+      font-size: 16px;
+    }
+  }
+  
+  

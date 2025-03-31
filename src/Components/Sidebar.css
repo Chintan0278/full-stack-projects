@@ -1,0 +1,123 @@
+/* Sidebar Container */
+.sidebar {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 270px;
+    height: calc(100vh - 120px);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Sidebar Heading */
+.sidebar .logo-name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Category List - Scrollable */
+.sidebar-content {
+    flex: 1;
+    margin-top: 10px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Ensuring First Category Item Has Enough Spacing */
+.lists .list:first-child {
+    margin-top: 10px; /* Creates space below separator */
+}
+
+/* Scrollbar Styling */
+.sidebar-content::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar-content::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 6px;
+}
+.sidebar-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Sidebar Links */
+.nav-link {
+    width: 100%;
+    display: flex; /* Ensures the hover effect applies correctly */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background: #f8f9fa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    white-space: normal;
+    text-align: left;
+    gap: 10px;
+}
+
+/* Hover Animation */
+.nav-link:hover {
+    background: #007bff;
+    color: #fff;
+    transform: scale(1.08); /* Slight scaling effect */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Active (Clicked) State */
+.nav-link:active {
+    background: #0056b3;
+    transform: scale(1);
+}
+
+/* Sidebar Icons */
+.nav-link .icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* Fix for Extra Long Names */
+.nav-link.long-text {
+    white-space: normal;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+
+/* Fix for Main Content Overlap */
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+/* Adjust Sidebar for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px;
+        left: 10px;
+        top: 80px;
+        height: calc(100vh - 90px);
+    }
+    .main-content {
+        margin-left: 240px;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
